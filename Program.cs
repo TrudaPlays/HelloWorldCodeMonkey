@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Calculator
 {
@@ -9,6 +10,13 @@ namespace Calculator
             string? input;
             int operationCounter = 0;
             string result = null;
+            int additionCounter = 0;
+            int subtractionCounter = 0;
+            int multiplicationCounter = 0;
+            int divisionCounter = 0;
+            int averageCounter = 0;
+            int salestaxCounter = 0;
+
 
             do
             {
@@ -49,8 +57,8 @@ namespace Calculator
                         Console.WriteLine(number1 + " plus " + number2 + " = " + total);
                         Console.WriteLine("");
                         operationCounter++;
+                        additionCounter++;
                         result = "addition";
-
 
                         break;
 
@@ -69,6 +77,7 @@ namespace Calculator
                         Console.WriteLine(sub1 + " minus " + sub2 + " = " + subTotal);
                         Console.WriteLine("");
                         operationCounter++;
+                        subtractionCounter++;
                         result = "subtraction";
 
 
@@ -89,9 +98,9 @@ namespace Calculator
                         Console.WriteLine(mul1 + " times " + mul2 + " = " + mulTotal);
                         Console.WriteLine("");
                         operationCounter++;
+                        multiplicationCounter++;
                         result = "multiplication";
-
-
+                        
                         break;
 
                     case 4:
@@ -111,6 +120,7 @@ namespace Calculator
                             Console.WriteLine(div1 + " divided by " + div2 + " = " + divTotal);
                             Console.WriteLine("");
                             operationCounter++;
+                            divisionCounter++;
                             result = "division";
                         }
                         else
@@ -138,6 +148,7 @@ namespace Calculator
                         Console.WriteLine("The average of " + avg1 + " and " + avg2 + " is " + avgTotal);
                         Console.WriteLine(" ");
                         operationCounter++;
+                        averageCounter++;
                         result = "average of two numbers";
 
 
@@ -160,6 +171,7 @@ namespace Calculator
                         Console.WriteLine(currencyPrice + " with 5.5% sales tax applied is equal to " + currencyTotal);
                         Console.WriteLine(" ");
                         operationCounter++;
+                        salestaxCounter++;
                         result = "sales tax calculation for " + currencyPrice;
 
                         break;
@@ -171,10 +183,18 @@ namespace Calculator
 
 
             Console.WriteLine("Console calculator exited. Goodbye!");
-            Console.WriteLine(operationCounter);
-            
+            Console.WriteLine("You performed " + operationCounter + " successful calculations.");
 
-            
+            Console.WriteLine("You did addition " + additionCounter + " times.");
+            Console.WriteLine("You did subtraction " + subtractionCounter + " times.");
+            Console.WriteLine("You did multiplication " + multiplicationCounter + " times.");
+            Console.WriteLine("You did division " + divisionCounter + " times.");
+            Console.WriteLine("You found the average of two numbers " + averageCounter + " times.");
+            Console.WriteLine("You found the sales tax " + salestaxCounter + " times.");
+
+            Console.WriteLine("The last calculation done was " + result);
+
+
 
         }
     }
