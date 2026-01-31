@@ -303,8 +303,9 @@ namespace Calculator
                         decimal salesTaxTotal = price + taxAmount; //finds the final dollar amount
                         string currencyTotal = salesTaxTotal.ToString("C"); //gives the amount the dollar format
                         string currencyPrice = price.ToString("C");
+                        string currencyTaxAmount = taxAmount.ToString("C");
 
-
+                        Console.WriteLine("The sales tax amount will be: " + currencyTaxAmount);
                         Console.WriteLine(currencyPrice + " with 5.5% sales tax applied is equal to " + currencyTotal);
                         Console.WriteLine(" ");
                         operationCounter++;
