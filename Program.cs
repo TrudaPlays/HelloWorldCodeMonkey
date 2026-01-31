@@ -88,7 +88,7 @@ namespace Calculator
 
                         decimal total = number1 + number2;
 
-                        Console.WriteLine(number1 + " plus " + number2 + " is " + total);
+                        Console.WriteLine(number1 + " plus " + number2 + " is " + (double)total);
                         Console.WriteLine("");
                         operationCounter++; //adds 1 to the operation counter to track how many calculations have been performed
                         additionCounter++; // counts how many additions have been performed for the summary at the end
@@ -131,7 +131,7 @@ namespace Calculator
 
                         decimal subTotal = sub1 - sub2;
 
-                        Console.WriteLine(sub1 + " minus " + sub2 + " is " + subTotal);
+                        Console.WriteLine(sub1 + " minus " + sub2 + " is " + (double)subTotal);
                         Console.WriteLine("");
                         operationCounter++;
                         subtractionCounter++;
@@ -174,7 +174,7 @@ namespace Calculator
 
                         decimal mulTotal = mul1 * mul2;
 
-                        Console.WriteLine(mul1 + " times " + mul2 + " is " + mulTotal);
+                        Console.WriteLine(mul1 + " times " + mul2 + " is " + (double)mulTotal);
                         Console.WriteLine("");
                         operationCounter++;
                         multiplicationCounter++;
@@ -212,7 +212,7 @@ namespace Calculator
                                 {
                                     decimal divTotal = div1 / div2;
 
-                                    Console.WriteLine(div1 + " divided by " + div2 + " is " + divTotal);
+                                    Console.WriteLine(div1 + " divided by " + div2 + " is " + (double)divTotal);
                                     Console.WriteLine("");
                                     operationCounter++;
                                     divisionCounter++;
@@ -269,7 +269,7 @@ namespace Calculator
 
                         decimal avgTotal = (avg1 + avg2) / 2;
 
-                        Console.WriteLine("The average of " + avg1 + " and " + avg2 + " is " + avgTotal);
+                        Console.WriteLine("The average of " + avg1 + " and " + avg2 + " is " + (double)avgTotal);
                         Console.WriteLine(" ");
                         operationCounter++;
                         averageCounter++;
