@@ -1,1 +1,5 @@
-# HelloWorld
+Calculator variable type decision
+
+I decided to use decimal for the results of all of the calculations because decimal is more precise than double, and while it does perform slower than double a console calculator is not really caring about speed but in fact precision. I used double for all of the variables that are storing the numbers for the calculations (e.g. the addition, subtraction, multiplication, divison and average variables).
+I used decimal for the entirety of the sales tax calculation as it is dealing with money, and that is precisely the case when decimal is most often used to have very precise calculations.
+I didn't end up using float at all, as float is even less precise than double which is less precise than decimal and so didn't really fit with a calculator. Floats are best used in game development for speed where a bit of error is completely acceptable as speed of rendering is crucial. An interesting note that it is exactly the opposite of decimal which focuses on precise calculations while performing very slowly wherease float performs the calculations with great speed but with often much more rounding error than even double let alone decimal.
