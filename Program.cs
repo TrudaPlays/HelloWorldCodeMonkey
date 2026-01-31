@@ -9,7 +9,7 @@ namespace Calculator
         {
             string? input;
             int operationCounter = 0;
-            string result = null;
+            string? result = null;
             int additionCounter = 0;
             int subtractionCounter = 0;
             int multiplicationCounter = 0;
@@ -21,8 +21,12 @@ namespace Calculator
             do
             {
                 Console.WriteLine("Welcome to the console calculator!");
-                Console.WriteLine("Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division");
-                Console.WriteLine("Enter 5 for average of two numbers, and 6 for finding the 5.5% sales tax of a dollar amount");
+                Console.WriteLine("Enter 1 for addition.");
+                Console.WriteLine("Enter 2 for subtraction.");
+                Console.WriteLine("Enter 3 for multiplication.");
+                Console.WriteLine("Enter 4 for division.");
+                Console.WriteLine("Enter 5 for average of two numbers.");
+                Console.WriteLine("Enter 6 for finding the 5.5% sales tax of a dollar amount.");
                 Console.WriteLine("Enter exit to escape.");
 
                 int choice = 0;
@@ -43,8 +47,8 @@ namespace Calculator
                 switch (choice)
                 {
                     case 1:
-                        double number1 = 0;
-                        double number2 = 0;
+                        decimal number1 = 0;
+                        decimal number2 = 0;
 
                         Console.WriteLine("Addition chosen");
                         while (true)
@@ -52,7 +56,7 @@ namespace Calculator
                             Console.WriteLine("Choose your first number");
                             try
                             {
-                                number1 = Convert.ToDouble(Console.ReadLine());
+                                number1 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -66,7 +70,7 @@ namespace Calculator
                             Console.WriteLine("Choose your second number");
                             try
                             {
-                                number2 = Convert.ToDouble(Console.ReadLine());
+                                number2 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -75,9 +79,9 @@ namespace Calculator
                             }
                         }
 
-                        double total = number1 + number2;
+                        decimal total = number1 + number2;
 
-                        Console.WriteLine(number1 + " plus " + number2 + " = " + total);
+                        Console.WriteLine(number1 + " plus " + number2 + " is " + total);
                         Console.WriteLine("");
                         operationCounter++;
                         additionCounter++;
@@ -86,8 +90,8 @@ namespace Calculator
                         break;
 
                     case 2:
-                        double sub1 = 0;
-                        double sub2 = 0;
+                        decimal sub1 = 0;
+                        decimal sub2 = 0;
 
                         Console.WriteLine("Subtraction chosen");
                         while (true)
@@ -95,7 +99,7 @@ namespace Calculator
                             Console.WriteLine("Choose your first number");
                             try
                             {
-                                sub1 = Convert.ToDouble(Console.ReadLine());
+                                sub1 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -109,7 +113,7 @@ namespace Calculator
                             Console.WriteLine("Choose your second number");
                             try
                             {
-                                sub2 = Convert.ToDouble(Console.ReadLine());
+                                sub2 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -118,9 +122,9 @@ namespace Calculator
                             }
                         }
 
-                        double subTotal = sub1 - sub2;
+                        decimal subTotal = sub1 - sub2;
 
-                        Console.WriteLine(sub1 + " minus " + sub2 + " = " + subTotal);
+                        Console.WriteLine(sub1 + " minus " + sub2 + " is " + subTotal);
                         Console.WriteLine("");
                         operationCounter++;
                         subtractionCounter++;
@@ -130,8 +134,8 @@ namespace Calculator
                         break;
 
                     case 3:
-                        double mul1 = 0;
-                        double mul2 = 0;
+                        decimal mul1 = 0;
+                        decimal mul2 = 0;
 
                         Console.WriteLine("Multiplication chosen");
 
@@ -140,7 +144,7 @@ namespace Calculator
                             Console.WriteLine("Choose your first number");
                             try
                             {
-                                mul1 = Convert.ToDouble(Console.ReadLine());
+                                mul1 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -153,7 +157,7 @@ namespace Calculator
                             Console.WriteLine("Choose your second number");
                             try
                             {
-                                mul2 = Convert.ToDouble(Console.ReadLine());
+                                mul2 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -162,9 +166,9 @@ namespace Calculator
                             }
                         }
 
-                        double mulTotal = mul1 * mul2;
+                        decimal mulTotal = mul1 * mul2;
 
-                        Console.WriteLine(mul1 + " times " + mul2 + " = " + mulTotal);
+                        Console.WriteLine(mul1 + " times " + mul2 + " is " + mulTotal);
                         Console.WriteLine("");
                         operationCounter++;
                         multiplicationCounter++;
@@ -173,8 +177,8 @@ namespace Calculator
                         break;
 
                     case 4:
-                        double div1 = 0;
-                        double div2 = 0;
+                        decimal div1 = 0;
+                        decimal div2 = 0;
 
                         Console.WriteLine("Division chosen");
 
@@ -183,7 +187,7 @@ namespace Calculator
                             Console.WriteLine("Choose your first number");
                             try
                             {
-                                div1 = Convert.ToDouble(Console.ReadLine());
+                                div1 = Convert.ToDecimal(Console.ReadLine());
                                 break;
                             }
                             catch (FormatException ex)
@@ -196,13 +200,13 @@ namespace Calculator
                             Console.WriteLine("Choose your second number");
                             try
                             {
-                                div2 = Convert.ToDouble(Console.ReadLine());
+                                div2 = Convert.ToDecimal(Console.ReadLine());
 
                                 if (div2 != 0)
                                 {
-                                    double divTotal = div1 / div2;
+                                    decimal divTotal = div1 / div2;
 
-                                    Console.WriteLine(div1 + " divided by " + div2 + " = " + divTotal);
+                                    Console.WriteLine(div1 + " divided by " + div2 + " is " + divTotal);
                                     Console.WriteLine("");
                                     operationCounter++;
                                     divisionCounter++;
