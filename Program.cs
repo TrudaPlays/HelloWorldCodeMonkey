@@ -47,10 +47,33 @@ namespace Calculator
                         double number2 = 0;
 
                         Console.WriteLine("Addition chosen");
-                        Console.WriteLine("Choose your first number");
-                        number1 = Convert.ToDouble(Console.ReadLine());
-                        Console.WriteLine("Choose your second number");
-                        number2 = Convert.ToDouble(Console.ReadLine());
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your first number");
+                            try
+                            {
+                                number1 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
+                       
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your second number");
+                            try
+                            {
+                                number2 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
 
                         double total = number1 + number2;
 
@@ -67,10 +90,33 @@ namespace Calculator
                         double sub2 = 0;
 
                         Console.WriteLine("Subtraction chosen");
-                        Console.WriteLine("Choose your first number");
-                        sub1 = Convert.ToDouble(Console.ReadLine());
-                        Console.WriteLine("Choose your second number");
-                        sub2 = Convert.ToDouble(Console.ReadLine());
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your first number");
+                            try
+                            {
+                                sub1 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
+
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your second number");
+                            try
+                            {
+                                sub2 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
 
                         double subTotal = sub1 - sub2;
 
@@ -88,10 +134,33 @@ namespace Calculator
                         double mul2 = 0;
 
                         Console.WriteLine("Multiplication chosen");
-                        Console.WriteLine("Choose your first number");
-                        mul1 = Convert.ToDouble(Console.ReadLine());
-                        Console.WriteLine("Choose your second number");
-                        mul2 = Convert.ToDouble(Console.ReadLine());
+
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your first number");
+                            try
+                            {
+                                mul1 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your second number");
+                            try
+                            {
+                                mul2 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
 
                         double mulTotal = mul1 * mul2;
 
@@ -108,28 +177,49 @@ namespace Calculator
                         double div2 = 0;
 
                         Console.WriteLine("Division chosen");
-                        Console.WriteLine("Choose your first number");
-                        div1 = Convert.ToDouble(Console.ReadLine());
-                        Console.WriteLine("Choose your second number");
-                        div2 = Convert.ToDouble(Console.ReadLine());
 
-                        if (div2 != 0)
+                        while (true)
                         {
-                            double divTotal = div1 / div2;
-
-                            Console.WriteLine(div1 + " divided by " + div2 + " = " + divTotal);
-                            Console.WriteLine("");
-                            operationCounter++;
-                            divisionCounter++;
-                            result = "division";
+                            Console.WriteLine("Choose your first number");
+                            try
+                            {
+                                div1 = Convert.ToDouble(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
                         }
-                        else
+                        while (true)
                         {
-                            Console.WriteLine("Sorry divison by zero is not allowed.");
-                            Console.WriteLine(" ");
-                        }
-                        
+                            Console.WriteLine("Choose your second number");
+                            try
+                            {
+                                div2 = Convert.ToDouble(Console.ReadLine());
 
+                                if (div2 != 0)
+                                {
+                                    double divTotal = div1 / div2;
+
+                                    Console.WriteLine(div1 + " divided by " + div2 + " = " + divTotal);
+                                    Console.WriteLine("");
+                                    operationCounter++;
+                                    divisionCounter++;
+                                    result = "division";
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Sorry divison by zero is not allowed.");
+                                    Console.WriteLine(" ");
+                                }
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
 
                         break;
 
@@ -138,10 +228,33 @@ namespace Calculator
                         decimal avg2 = 0;
 
                         Console.WriteLine("Average of two numbers chosen");
-                        Console.WriteLine("Choose your first number");
-                        avg1 = Convert.ToDecimal(Console.ReadLine());
-                        Console.WriteLine("Choose your second number");
-                        avg2 = Convert.ToDecimal(Console.ReadLine());
+
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your first number");
+                            try
+                            {
+                                avg1 = Convert.ToDecimal(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
+                        while (true)
+                        {
+                            Console.WriteLine("Choose your second number");
+                            try
+                            {
+                                avg2 = Convert.ToDecimal(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
 
                         decimal avgTotal = (avg1 + avg2) / 2;
 
@@ -158,8 +271,20 @@ namespace Calculator
                         decimal price = 0;
 
                         Console.WriteLine("Sales tax calculator chosen. 5.5% sales tax will be applied.");
-                        Console.WriteLine("Enter your dollar amount");
-                        price = Convert.ToDecimal(Console.ReadLine());
+
+                        while (true)
+                        {
+                            Console.WriteLine("Enter your dollar amount");
+                            try
+                            {
+                                price = Convert.ToDecimal(Console.ReadLine());
+                                break;
+                            }
+                            catch (FormatException ex)
+                            {
+                                continue;
+                            }
+                        }
 
                         decimal taxRate = 0.055m; // 5.5% sales tax
                         decimal taxAmount = Math.Round(price * taxRate, 2, MidpointRounding.AwayFromZero);
